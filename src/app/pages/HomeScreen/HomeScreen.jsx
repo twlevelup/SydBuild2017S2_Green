@@ -50,7 +50,7 @@ export const HomeScreenButtons = {
   LEFT: () => ButtonAction.goToPage('/team'),
   // LEFT: () => ButtonAction.goToPage('/news'), // this will make the left button navigate to the news page
   RIGHT: () => ButtonAction.goToPage('/contacts'),
-  TOP: () => ButtonAction.scrollUp(),
+  TOP: () => ButtonAction.goToPage('/news'),
   BOTTOM: () => ButtonAction.scrollDown(),
 };
 
