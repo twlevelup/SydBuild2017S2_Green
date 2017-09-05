@@ -5,7 +5,7 @@
   "author": "LevelUp",
   "repository": {
     "type": "git",
-    "url": "https://github.com/twlevelup/watch_edition_react"
+    "url": "https://github.com/twlevelup/SydBuild2017S2_Green"
   },
   "scripts": {
     "test": "jest",
