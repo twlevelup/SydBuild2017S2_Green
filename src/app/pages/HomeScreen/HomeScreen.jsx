@@ -45,7 +45,10 @@ export const HomeScreenComponent = () => {
 };
 
 export const HomeScreenButtons = {
-  LEFT: () => ButtonAction.goToPage({ pathname: '/counter', state: { number: 5 } }),
+  // LEFT: () => ButtonAction.goToPage({ pathname: '/counter', state: { number: 5 } }),
+  // RIGHT: () => ButtonAction.goToPage('/contacts'),
+  LEFT: () => ButtonAction.goToPage('/team'),
+  // LEFT: () => ButtonAction.goToPage('/news'), // this will make the left button navigate to the news page
   RIGHT: () => ButtonAction.goToPage('/contacts'),
   TOP: () => ButtonAction.scrollUp(),
   BOTTOM: () => ButtonAction.scrollDown(),
