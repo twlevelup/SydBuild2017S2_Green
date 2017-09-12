@@ -19,7 +19,6 @@ describe('<AppointmentScreenComponent />', () => {
     });
   });
 
-
   test('it should have a LEFT button config of going to home page', () => {
     AppointmentScreenButtons.LEFT();
     expect(ButtonAction.goToPage).toHaveBeenCalledWith('/');
@@ -39,5 +38,4 @@ describe('<AppointmentScreenComponent />', () => {
     AppointmentScreenButtons.BOTTOM();
     expect(ButtonAction.scrollDown).toHaveBeenCalled();
   });
-
 });
