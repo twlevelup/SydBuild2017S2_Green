@@ -21,6 +21,12 @@ describe('<TeamScreenComponent />', () => {
   it('should display Zinh', () => {
     expect(componentWrapper).toIncludeText('Zinh');
   });
+  it('should display Ulas', () => {
+    expect(componentWrapper).toIncludeText('Ulas');
+  });
+  it('should display Tammy', () => {
+    expect(componentWrapper).toIncludeText('Tammy');
+  });
   // it('should display the article publish date', () => {
   //   expect(componentWrapper.find('#publish-date')).toHaveText('Publish date: 23/05/1823');
   // });

@@ -12,6 +12,8 @@ export const TeamScreenComponent = () => {
             My new team members are:
             Jeremy
             Zinh
+            Ulas
+            Tammy
           </p>
 
         </div>
