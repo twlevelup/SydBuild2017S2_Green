@@ -6,9 +6,7 @@ export const AppointmentScreenComponent = () => {
   return (
     <div id='appointments-page'>
       <div id='appointments-container'>
-        <div>
-            No appointments
-        </div>
+        <div>No appointments</div>
       </div>
     </div>
   );
