@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import AppointmentScreen from './app/pages/AppointmentScreen/AppointmentScreen';
 import TeamScreen from './app/pages/TeamScreen/TeamScreen';
 import HomeScreen from './app/pages/HomeScreen/HomeScreen';
 import CounterScreen from './app/pages/CounterScreen/CounterScreen';
@@ -13,6 +14,7 @@ const pages = [
   { path: '/', Component: HomeScreen },
   { path: '/contacts', Component: ContactScreen, props: { contacts } },
   { path: '/counter', Component: CounterScreen },
+  { path: '/appointments', Component: AppointmentScreen },
   // { path: '/news', Component: NewsScreen },
   { path: '/team', Component: TeamScreen },
   { path: '/notfound', Component: NotFoundScreen },

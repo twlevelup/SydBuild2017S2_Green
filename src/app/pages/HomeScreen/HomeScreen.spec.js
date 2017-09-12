@@ -31,9 +31,9 @@ describe('HomeScreenComponent component', () => {
     expect(ButtonAction.goToPage).toHaveBeenCalledWith('/team');// { pathname: '/counter', state: { number: 5 } }
   });
 
-  test('it should have a RIGHT button config of going to contactList page', () => {
+  test('it should have a RIGHT button config of going to AppointmentScreen page', () => {
     HomeScreenButtons.RIGHT();
-    expect(ButtonAction.goToPage).toHaveBeenCalledWith('/contacts');
+    expect(ButtonAction.goToPage).toHaveBeenCalledWith('/appointments');
   });
 
   test('it should have a TOP button config of going to news page', () => {
