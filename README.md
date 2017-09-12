@@ -24,6 +24,10 @@ $ ./go setup
 Visit `http://localhost:8000/` from your browser of choice.
 Server is visible from the local network as well.
 
+## Production
+
+https://twlevelup-syd-2017-s2-green.herokuapp.com/
+
 
 ### Before you commit
 
