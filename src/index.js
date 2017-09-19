@@ -7,6 +7,7 @@ import CounterScreen from './app/pages/CounterScreen/CounterScreen';
 import ContactScreen from './app/pages/ContactListScreen/ContactListScreen';
 import NotFoundScreen from './app/pages/NotFoundScreen/NotFoundScreen';
 import contacts from './app/data/contacts.json';
+import appointments from './app/data/appointments.json';
 import WatchApp from './framework';
 import NewsScreen from './app/pages/NewsScreen/NewsScreen';
 import EmergencyScreen from './app/pages/EmergencyScreen/EmergencyScreen';
@@ -15,8 +16,7 @@ const pages = [
   { path: '/', Component: HomeScreen },
   { path: '/contacts', Component: ContactScreen, props: { contacts } },
   { path: '/counter', Component: CounterScreen },
-  { path: '/appointments', Component: AppointmentScreen },
-  // { path: '/news', Component: NewsScreen },
+  { path: '/appointments', Component: AppointmentScreen, props: { appointments } },
   { path: '/team', Component: TeamScreen },
   { path: '/notfound', Component: NotFoundScreen },
   { path: '/news', Component: NewsScreen },
