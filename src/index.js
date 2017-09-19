@@ -9,6 +9,7 @@ import NotFoundScreen from './app/pages/NotFoundScreen/NotFoundScreen';
 import contacts from './app/data/contacts.json';
 import WatchApp from './framework';
 import NewsScreen from './app/pages/NewsScreen/NewsScreen';
+import EmergencyScreen from './app/pages/EmergencyScreen/EmergencyScreen';
 
 const pages = [
   { path: '/', Component: HomeScreen },
@@ -19,6 +20,7 @@ const pages = [
   { path: '/team', Component: TeamScreen },
   { path: '/notfound', Component: NotFoundScreen },
   { path: '/news', Component: NewsScreen },
+  { path: '/emergency', Component: EmergencyScreen },
 ];
 
 ReactDOM.render(

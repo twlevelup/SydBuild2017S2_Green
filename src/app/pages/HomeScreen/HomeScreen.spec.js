@@ -36,9 +36,9 @@ describe('HomeScreenComponent component', () => {
     expect(ButtonAction.goToPage).toHaveBeenCalledWith('/appointments');
   });
 
-  test('it should have a TOP button config of going to news page', () => {
+  test('it should have a TOP button config of going to emergency page', () => {
     HomeScreenButtons.TOP();
-    expect(ButtonAction.goToPage).toHaveBeenCalledWith('/news');
+    expect(ButtonAction.goToPage).toHaveBeenCalledWith('/emergency');
   });
 
   test('it should have a BOTTOM button config of scrolling page down', () => {
