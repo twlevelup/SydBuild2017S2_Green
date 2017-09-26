@@ -1,0 +1,12 @@
+.services-menu .menu {
+    font-size: 2em;
+    border: 1px solid white;
+    list-style: none;
+    padding: 2px;
+    text-align: center;
+}
+
+.services-menu {
+    list-style-position: inside;
+    padding-left: 0;
+}
