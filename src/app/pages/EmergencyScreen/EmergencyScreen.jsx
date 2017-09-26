@@ -23,6 +23,7 @@ export const EmergencyScreenComponent = () => {
 
 export const EmergencyScreenButtons = {
   LEFT: () => ButtonAction.goToPage('/'),
+  RIGHT: () => ButtonAction.goToPage('/emergency-confirmation'),
 };
 
 export default WithButtonConfigs(EmergencyScreenComponent, EmergencyScreenButtons);

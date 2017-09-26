@@ -30,7 +30,8 @@ describe('<EmergencyScreenComponent />', () => {
     expect(ButtonAction.goToPage).toHaveBeenCalledWith('/');
   });
 
-  xit('should have a RIGHT button config of going to Emergency Confirmation Page', () => {
+  it('should have a RIGHT button config of going to Emergency Confirmation Page', () => {
     EmergencyScreenButtons.RIGHT();
+    expect(ButtonAction.goToPage).toHaveBeenCalledWith('/emergency-confirmation');
   });
 });

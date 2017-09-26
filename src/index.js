@@ -11,7 +11,7 @@ import WatchApp from './framework';
 import NewsScreen from './app/pages/NewsScreen/NewsScreen';
 import EmergencyScreen from './app/pages/EmergencyScreen/EmergencyScreen';
 import ServicesScreen from './app/pages/ServicesScreen/ServicesScreen';
-
+import EmergencyConfirmationScreen from './app/pages/EmergencyConfirmationScreen/EmergencyConfirmationScreen';
 
 const pages = [
   { path: '/', Component: HomeScreen },
@@ -22,6 +22,7 @@ const pages = [
   { path: '/news', Component: NewsScreen },
   { path: '/emergency', Component: EmergencyScreen },
   { path: '/services', Component: ServicesScreen },
+  { path: '/emergency-confirmation', Component: EmergencyConfirmationScreen },
 ];
 
 ReactDOM.render(
