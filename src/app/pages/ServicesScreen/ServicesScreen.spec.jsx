@@ -36,5 +36,10 @@ describe('<ServicesScreenComponent />', () => {
       ServicesScreenButtons.BOTTOM();
       expect(ButtonAction.scrollDown).toHaveBeenCalled();
     });
+
+    test('when you click on screen button it should navigate to food list based on location', () => {
+      ServicesScreenButtons.SCREEN();
+      expect(ButtonAction.goToPage).toHaveBeenCalledWith('/food-location');
+    });
   });
 });
