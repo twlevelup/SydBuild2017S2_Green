@@ -3,29 +3,34 @@ import {
   string,
   arrayOf,
   shape,
+  number,
 } from 'prop-types';
 
 import WithButtonConfigs from '../../../framework/containers/WithButtonConfigs';
 import ButtonAction from '../../../framework/util/ButtonAction';
-import GenericList from '../../../framework/components/GenericList/GenericList';
-import Appointment from './components/Appointment/Appointment';
+import ScrollList from '../../../framework/components/ScrollList/ScrollList';
 
 
-export const AppointmentScreenComponent = ({ appointments }) => {
+export const AppointmentScreenComponent = ({ appointments, selectedIndex }) => {
   return (
     <div id='appointment-screen' className='appointment-screen'>
       <h1 className='title'>Appointments</h1>
-      <GenericList
-        className='appointments-list'
-        items={ appointments }
-        listItem={ Appointment }
+      <ScrollList
+        labels={ appointments.map(a => a.provider) }
+        selectedIndex={ selectedIndex }
       />
     </div>
 
   );
 };
 
+const getNextIndex = (indexChange, selectedIndex, appointments) => {
+  const newIndex = selectedIndex + indexChange;
+  return Math.abs((newIndex + appointments.length) % appointments.length);
+};
+
 AppointmentScreenComponent.propTypes = {
+  selectedIndex: number.isRequired,
   appointments: arrayOf(shape({
     id: string,
     patient: string,
@@ -35,11 +40,15 @@ AppointmentScreenComponent.propTypes = {
   })).isRequired,
 };
 
-export const AppointmentScreenButtons = {
+export const AppointmentScreenButtons = ({ appointments, selectedIndex = 0 }) => ({
   LEFT: () => ButtonAction.goToPage('/'),
   RIGHT: () => ButtonAction.goToPage(),
-  TOP: () => ButtonAction.scrollUp(),
-  BOTTOM: () => ButtonAction.scrollDown(),
-};
+  BOTTOM: () => {
+    ButtonAction.goToPage({ state: { selectedIndex: getNextIndex(1, selectedIndex, appointments) } });
+  },
+  TOP: () => {
+    ButtonAction.goToPage({ state: { selectedIndex: getNextIndex(-1, selectedIndex, appointments) } });
+  },
+});
 
 export default WithButtonConfigs(AppointmentScreenComponent, AppointmentScreenButtons);

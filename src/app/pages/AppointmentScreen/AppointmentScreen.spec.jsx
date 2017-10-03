@@ -7,15 +7,25 @@ jest.mock('../../../framework/util/ButtonAction');
 
 describe('<AppointmentScreenComponent />', () => {
   let componentWrapper;
-
+  const mockAppointments = [{
+    'id': '1',
+    'patient': 'Homer J Simpson',
+    'address': 'Level 4, Somewhere St, Sydney',
+    'provider': 'Doctor Helpful',
+    'time': '01/01/2017 00:00',
+  },
+  {
+    'id': '2',
+    'patient': 'Hello appt',
+    'address': 'Level 4, Somewhere St, Sydney',
+    'provider': 'Doctor Helpful',
+    'time': '01/01/2017 00:00',
+  }];
   beforeEach(() => {
-    componentWrapper = shallow(<AppointmentScreenComponent appointments={ [{
-      'id': '1',
-      'patient': 'Homer J Simpson',
-      'address': 'Level 4, Somewhere St, Sydney',
-      'provider': 'Doctor Helpful',
-      'time': '01/01/2017 00:00',
-    }] }
+    jest.resetAllMocks();
+    componentWrapper = shallow(<AppointmentScreenComponent
+      appointments={ mockAppointments }
+      selectedIndex={ 0 }
     />);
     jest.spyOn(ButtonAction, 'goToPage');
   });
@@ -33,31 +43,62 @@ describe('<AppointmentScreenComponent />', () => {
     });
 
     describe('Appointments List', () => {
-      test('should contain a GenericList component', () => {
-        expect(componentWrapper.find('GenericList')).toBePresent();
+      test('should contain a ScrollList component', () => {
+        expect(componentWrapper.find('ScrollList')).toBePresent();
       });
     });
   });
 
   describe('AppointmentScreen Buttons', () => {
     test('it should have a LEFT button config of going to home page', () => {
-      AppointmentScreenButtons.LEFT();
+      AppointmentScreenButtons(componentWrapper).LEFT();
       expect(ButtonAction.goToPage).toHaveBeenCalledWith('/');
     });
 
     test('it should have a RIGHT button config of doing nothing', () => {
-      AppointmentScreenButtons.RIGHT();
+      AppointmentScreenButtons(componentWrapper).RIGHT();
       expect(ButtonAction.goToPage).toHaveBeenCalled();
     });
+    describe('Top button', () => {
+      test('it should have a TOP button config of selecting previous appointment', () => {
+        AppointmentScreenButtons({ appointments: mockAppointments, selectedIndex: 1 }).TOP();
+        expect(ButtonAction.goToPage).toHaveBeenCalledWith({
+          state: { selectedIndex: 0 },
+        });
+      });
+      it('should roll back to the bottom', () => {
+        AppointmentScreenButtons({ appointments: mockAppointments, selectedIndex: 0 }).TOP();
 
-    test('it should have a TOP button config of doing nothing', () => {
-      AppointmentScreenButtons.TOP();
-      expect(ButtonAction.goToPage).toHaveBeenCalled();
+        expect(ButtonAction.goToPage).toHaveBeenCalledWith({
+          state: { selectedIndex: 1 },
+        });
+      });
     });
 
-    test('it should have a BOTTOM button config of doing nothing', () => {
-      AppointmentScreenButtons.BOTTOM();
-      expect(ButtonAction.scrollDown).toHaveBeenCalled();
+    describe('Bottom button', () => {
+      it('should set previous appointment', () => {
+        AppointmentScreenButtons({ appointments: mockAppointments, selectedIndex: 0 }).BOTTOM();
+
+        expect(ButtonAction.goToPage).toHaveBeenCalledWith({
+          state: { selectedIndex: 1 },
+        });
+      });
+
+      it('should roll back to the top', () => {
+        AppointmentScreenButtons({ appointments: mockAppointments, selectedIndex: 1 }).BOTTOM();
+
+        expect(ButtonAction.goToPage).toHaveBeenCalledWith({
+          state: { selectedIndex: 0 },
+        });
+      });
+
+      it('should default the selectedIndex to 0', () => {
+        AppointmentScreenButtons({ appointments: mockAppointments }).BOTTOM();
+
+        expect(ButtonAction.goToPage).toHaveBeenCalledWith({
+          state: { selectedIndex: 1 },
+        });
+      });
     });
   });
 });
