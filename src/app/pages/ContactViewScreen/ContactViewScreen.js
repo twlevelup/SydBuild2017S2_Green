@@ -3,7 +3,6 @@ import {
   string,
   shape,
 } from 'prop-types';
-import { withRouter } from 'react-router';
 import ButtonAction from '../../../framework/util/ButtonAction';
 import WithButtonConfigs from '../../../framework/containers/WithButtonConfigs';
 
@@ -33,4 +32,4 @@ export const ContactViewScreenButtons = {
   BOTTOM: () => ButtonAction.scrollDown(),
 };
 
-export default withRouter(WithButtonConfigs(ContactViewScreenComponent, ContactViewScreenButtons));
+export default WithButtonConfigs(ContactViewScreenComponent, ContactViewScreenButtons);
