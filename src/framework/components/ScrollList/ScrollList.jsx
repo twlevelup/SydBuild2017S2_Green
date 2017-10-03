@@ -10,22 +10,16 @@ const ScrollList = ({ labels, selectedIndex, itemHeight }) => {
     } }
     >
       {
-        [
-          ...labels.slice(-2),
-          ...labels,
-          ...labels.slice(0, 2),
-        ]
-        .slice(selectedIndex, selectedIndex + 5)
-        .map((label, index) => (
+        labels.map((label, index) => (
           <li
-            key={ `scroll-list-item-${ label + index }` }
+            key={ `scroll-list-item-${ index + 1 }` }
             style={ {
               height: itemHeight,
               verticalAlign: 'middle',
               fontSize: index === 2 ? 20 : null,
 
             } }
-            className={ `scroll-item ${ index === 2 ? 'selected' : '' }` }
+            className={ `scroll-item ${ index === selectedIndex ? 'selected' : '' }` }
           >
             { label }
           </li>
