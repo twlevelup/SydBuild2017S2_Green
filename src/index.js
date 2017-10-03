@@ -4,6 +4,7 @@ import AppointmentScreen from './app/pages/AppointmentScreen/AppointmentScreen';
 import HomeScreen from './app/pages/HomeScreen/HomeScreen';
 import CounterScreen from './app/pages/CounterScreen/CounterScreen';
 import ContactScreen from './app/pages/ContactListScreen/ContactListScreen';
+import ContactViewScreen from './app/pages/ContactViewScreen/ContactViewScreen';
 import NotFoundScreen from './app/pages/NotFoundScreen/NotFoundScreen';
 import contacts from './app/data/contacts.json';
 import appointments from './app/data/appointments.json';
@@ -16,6 +17,7 @@ import EmergencyConfirmationScreen from './app/pages/EmergencyConfirmationScreen
 const pages = [
   { path: '/', Component: HomeScreen },
   { path: '/contacts', Component: ContactScreen, props: { contacts } },
+  { path: '/contact-view', Component: ContactViewScreen },
   { path: '/counter', Component: CounterScreen },
   { path: '/appointments', Component: AppointmentScreen, props: { appointments } },
   { path: '/notfound', Component: NotFoundScreen },
