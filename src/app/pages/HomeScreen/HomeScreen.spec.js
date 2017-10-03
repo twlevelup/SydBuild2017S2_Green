@@ -27,6 +27,7 @@ describe('HomeScreenComponent component', () => {
 
   test('it should have a LEFT button config of going to Services menu page', () => {
     HomeScreenButtons.LEFT();
+
     expect(ButtonAction.goToPage).toHaveBeenCalledWith('/services');
   });
 
