@@ -14,7 +14,7 @@ import contacts from './app/data/contacts.json';
 
 import appointments from './app/data/appointments.json';
 
-import food from './app/data/food.json';
+import FoodLocationScreen from './app/pages/FoodLocationScreen/FoodLocationScreen';
 
 import WatchApp from './framework';
 import NewsScreen from './app/pages/NewsScreen/NewsScreen';
@@ -30,8 +30,8 @@ const pages = [
 
   { path: '/appointments', Component: AppointmentScreen, props: { appointments } },
 
-  { path: '/food', Component: FoodScreen, props: { food } },
-
+  { path: '/food', Component: FoodScreen },
+  { path: '/food-location', Component: FoodLocationScreen },
   { path: '/notfound', Component: NotFoundScreen },
   { path: '/news', Component: NewsScreen },
   { path: '/emergency', Component: EmergencyScreen },

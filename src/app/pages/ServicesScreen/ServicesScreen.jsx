@@ -18,6 +18,7 @@ export const ServicesScreenButtons = {
   RIGHT: () => ButtonAction.goToPage('/services'),
   TOP: () => ButtonAction.scrollUp(),
   BOTTOM: () => ButtonAction.scrollDown(),
+  SCREEN: () => ButtonAction.goToPage('/food-location'),
 };
 
 export default WithButtonConfigs(ServicesScreenComponent, ServicesScreenButtons);
