@@ -1,0 +1,14 @@
+.location-icon {
+    background: url('ontheway.png') no-repeat;
+    background-size: contain;
+    margin: auto;
+    display: block;
+    width: 50%;
+    height: 67px;
+}
+
+.emergency-confirmation-page {
+    text-align: center;
+    color: #21BF00;
+    font-size: 30px;
+}

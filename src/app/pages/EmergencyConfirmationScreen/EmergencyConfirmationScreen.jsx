@@ -1,16 +1,16 @@
 import React from 'react';
 import ButtonAction from '../../../framework/util/ButtonAction';
 import WithButtonConfigs from '../../../framework/containers/WithButtonConfigs';
+import './emergencyconfirmation_screen.css';
 
 export const EmergencyConfirmationScreenComponent = () => {
   return (
-    <div id='emergency-confirmation-page'>
-      <p>
-        Sent out successfully
+    <div>
+      <p className='emergency-confirmation-page'>
+        Beacon sent!
+        Help is on the way
       </p>
-      <p>
-        Click left to back homescreen
-      </p>
+      <div className='location-icon' />
     </div>
   );
 };

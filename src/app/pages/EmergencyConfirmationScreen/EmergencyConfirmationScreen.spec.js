@@ -17,8 +17,8 @@ describe('<EmergencyConfirmationScreenComponent />', () => {
   });
 
   it('should display emergency confirmation success', () => {
-    expect(emergencyConfirmationWrapper).toIncludeText('Sent out successfully');
-    expect(emergencyConfirmationWrapper).toIncludeText('Click left to back homescreen');
+    expect(emergencyConfirmationWrapper).toIncludeText('Beacon sent!');
+    expect(emergencyConfirmationWrapper).toIncludeText('Help is on the way');
   });
 
   it('should have a LEFT button config of going to Home Page', () => {
