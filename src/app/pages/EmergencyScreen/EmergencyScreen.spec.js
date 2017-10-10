@@ -14,15 +14,17 @@ describe('<EmergencyScreenComponent />', () => {
   });
 
   it('should display contact emergency question', () => {
-    expect(emergencyFunction).toIncludeText('Would you like to contact emergency?');
+    expect(emergencyFunction).toIncludeText('Send');
+    expect(emergencyFunction).toIncludeText('EMERGENCY');
+    expect(emergencyFunction).toIncludeText('beacon?');
   });
 
   it('should display a no button text', () => {
-    expect(emergencyFunction.find('.no-button')).toIncludeText('No');
+    expect(emergencyFunction.find('.no-button')).toIncludeText('«press left to Cancel');
   });
 
   it('should display a yes button text', () => {
-    expect(emergencyFunction.find('.yes-button')).toIncludeText('Yes');
+    expect(emergencyFunction.find('.yes-button')).toIncludeText('Tap to confirm');
   });
 
   it('should have a LEFT button config of going to Home Page', () => {

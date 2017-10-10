@@ -7,15 +7,41 @@
 }
 
 .yes-button {
-	float: right;
-	margin-right: 25px;
+	margin-top: 10px;
+	font-size: 15px;
+	color: #21BF00;
 }
 
 .no-button {
-	float: left;
+	font-size: 12pt;
+	color: #D31624;
+	margin-top: 20px;
+}
+
+#emergency-screen-page {
+	text-align: center;
 }
 
 #emergency-question {
 	font-size: 20px;
 }
 
+.emergency-confirmation {
+	background: url('bigtick.png') no-repeat;
+	height: 72px;
+	width: 72px;
+	margin: auto;
+	display: block;
+	background-size: contain;
+	margin-top: 10px;
+}
+
+.emergency-header {
+	font-size: 20px;
+	margin: 0;
+}
+.emergency-header-large {
+	font-size: 30px;
+	color: #D31624;
+	line-height: 0em;
+}

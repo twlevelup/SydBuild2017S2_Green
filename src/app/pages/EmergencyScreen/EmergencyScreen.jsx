@@ -6,16 +6,17 @@ import './emergency_screen.css';
 export const EmergencyScreenComponent = () => {
   return (
     <div id='emergency-screen-page'>
-      <p id='emergency-question'>
-        Would you like to contact emergency?
-      </p>
-      <div className='no-button button-container'>
-        <span> No </span>
-        <span> X </span>
+      <div id='emergency-question'>
+        <h2 className='emergency-header'>Send</h2>
+        <h1 className='emergency-header-large'>EMERGENCY</h1>
+        <h2 className='emergency-header'>beacon?</h2>
       </div>
-      <div className='yes-button button-container'>
-        <span> Yes </span>
-        <span> &#10004; </span>
+      <div className='yes-button'>
+        <span>Tap to confirm</span>
+        <div className='emergency-confirmation' alt='' />
+      </div>
+      <div className='no-button'>
+        <span>&laquo;press left to Cancel</span>
       </div>
     </div>
   );
