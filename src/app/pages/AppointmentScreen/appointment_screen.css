@@ -1,3 +1,10 @@
-.scroll-item.selected {
-  background-color: #7f7f7f;
+
+.goBackMessage {
+  color: #D31624;
+  font-size: 16px;
+  position: absolute;
+  bottom: 0;
+}
+.title{
+  color: #ff9c39;
 }

@@ -34,7 +34,7 @@ describe('<AppointmentScreenComponent />', () => {
     describe('Appointment Screen Display', () => {
       test('it should display the title, Appointments', () => {
         expect(componentWrapper.find('.title')).toBePresent();
-        expect(componentWrapper).toIncludeText('Appointments');
+        expect(componentWrapper).toIncludeText('APPOINTMENTS');
       });
 
       test('should have class[appointment-screen]', () => {
@@ -45,6 +45,11 @@ describe('<AppointmentScreenComponent />', () => {
     describe('Appointments List', () => {
       test('should contain a ScrollList component', () => {
         expect(componentWrapper.find('ScrollList')).toBePresent();
+      });
+    });
+    describe('Go back message', () => {
+      test('should display go back message', () => {
+        expect(componentWrapper.find('.goBackMessage')).toHaveText('<< press left to go Back');
       });
     });
   });
@@ -59,6 +64,7 @@ describe('<AppointmentScreenComponent />', () => {
       AppointmentScreenButtons(componentWrapper).RIGHT();
       expect(ButtonAction.goToPage).toHaveBeenCalled();
     });
+
     describe('Top button', () => {
       test('it should have a TOP button config of selecting previous appointment', () => {
         AppointmentScreenButtons({ appointments: mockAppointments, selectedIndex: 1 }).TOP();

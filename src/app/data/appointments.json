@@ -4,13 +4,27 @@
     "patient": "Homer J Simpson",
     "address": "Level 4, Somewhere St, Sydney",
     "provider": "Doctor Helpful",
-    "time": "01/01/2017 00:00"
+    "time": "Today"
   },
   {
     "id": "2",
     "patient": "Homer J Simpson",
     "address": "Level 5, SomewhereElse St, Sydney",
     "provider": "Doctor John",
-    "time": "01/01/2017 00:00"
+    "time": "Tomorrow"
+  },
+  {
+    "id": "3",
+    "patient": "Test",
+    "address": "Level 5, SomewhereElse St, Sydney",
+    "provider": "Doctor Jack",
+    "time": "03 Oct"
+  },
+  {
+    "id": "4",
+    "patient": "Test",
+    "address": "Level 5, SomewhereElse St, Sydney",
+    "provider": "Doctor Josh",
+    "time": "07 Sep"
   }
 ]

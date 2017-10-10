@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import smallTick from './small_tick.png';
+import './scroll_list.css';
 
 const ScrollList = ({ labels, selectedIndex, itemHeight }) => {
   return (
@@ -16,12 +18,13 @@ const ScrollList = ({ labels, selectedIndex, itemHeight }) => {
             style={ {
               height: itemHeight,
               verticalAlign: 'middle',
-              fontSize: index === 2 ? 20 : null,
-
             } }
             className={ `scroll-item ${ index === selectedIndex ? 'selected' : '' }` }
           >
             { label }
+            { index === selectedIndex &&
+            <img src={ smallTick } className='selectedTick' alt='selected option' />
+            }
           </li>
         ))
     }

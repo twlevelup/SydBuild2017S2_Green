@@ -1,0 +1,13 @@
+.selectedTick {
+  float: right;
+  margin-top: -30px;
+}
+
+.scroll-item.selected {
+  background-color: rgba(154, 154, 154, 0.31);
+}
+
+.appointmentTime{
+  float: right;
+  margin-right: 34px;
+}

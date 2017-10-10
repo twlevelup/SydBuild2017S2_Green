@@ -15,11 +15,12 @@ import './appointment_screen.css';
 export const AppointmentScreenComponent = ({ appointments, selectedIndex }) => {
   return (
     <div id='appointment-screen' className='appointment-screen'>
-      <h1 className='title'>Appointments</h1>
+      <h1 className='title'>APPOINTMENTS</h1>
       <ScrollList
-        labels={ appointments.map(a => <p>{ a.provider } : {a.time}</p>) }
+        labels={ appointments.map(a => <p>{ a.provider } <span className='appointmentTime'>{a.time } </span></p>) }
         selectedIndex={ selectedIndex }
       />
+      <div className='goBackMessage'>&lt;&lt; press left to go Back</div>
     </div>
 
   );
