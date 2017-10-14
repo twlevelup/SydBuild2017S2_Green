@@ -15,6 +15,7 @@ import appointments from './app/data/appointments.json';
 
 import SurveyScreen from './app/pages/SurveyScreen/SurveyScreen';
 import surveyResponses from './app/data/survey.json';
+import SurveyConfirmationScreen from './app/pages/SurveyConfirmationScreen/SurveyConfirmationScreen';
 
 import FoodLocationScreen from './app/pages/FoodLocationScreen/FoodLocationScreen';
 
@@ -40,6 +41,7 @@ const pages = [
   { path: '/services', Component: ServicesScreen },
   { path: '/survey', Component: SurveyScreen, props: { surveyResponses } },
   { path: '/emergency-confirmation', Component: EmergencyConfirmationScreen },
+  { path: '/survey-confirmation', Component: SurveyConfirmationScreen },
 ];
 
 ReactDOM.render(
