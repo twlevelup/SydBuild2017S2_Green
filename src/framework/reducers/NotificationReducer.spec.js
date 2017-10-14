@@ -23,7 +23,7 @@ describe('NotificationReducer', () => {
         provider: 'Doctor Helpful',
         time: 'Today' };
       const result = reducer(undefined, { type: ACTION_TYPES.PUSH_APPOINTMENT_NOTIFICATION, notification });
-      expect(result).toMatchObject({ text: 'You are seeing Doctor Helpful Today', show: true });
+      expect(result).toMatchObject({ appointment: notification, show: true });
     });
   });
 
@@ -34,4 +34,3 @@ describe('NotificationReducer', () => {
     });
   });
 });
-

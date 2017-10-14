@@ -41,7 +41,7 @@ rules:
     "functions": "never"
   }]
   jsx-quotes: [1, "prefer-single"]
-  react/forbid-prop-types: "error"
+  react/forbid-prop-types: 0
   react/jsx-curly-spacing: [2, "always"]
   react/jsx-filename-extension: 0
   react/jsx-boolean-value: 0

@@ -8,6 +8,7 @@ const NotificationContainer = (popup) => {
       return {
         text: state.NotificationReducer.text,
         show: state.NotificationReducer.show,
+        appointment: state.NotificationReducer.appointment,
       };
     }
     return {

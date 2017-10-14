@@ -20,6 +20,24 @@ describe('NotificationPopup component', () => {
     });
   });
 
+  describe('When rendered appointment', () => {
+    const props = { show: true, appointment: { provider: 'docker h', time: 'today' } };
+    let wrapper;
+    beforeEach(() => {
+      wrapper = getMock(props);
+    });
+
+    it('should be visible', () => {
+      expect(wrapper.find('.notification-popup')).not.toHaveClassName('hidden');
+    });
+
+    it('should display the [text] property', () => {
+      expect(wrapper.find('.notification-popup')).toIncludeText('You are seeing');
+      expect(wrapper.find('.notification-popup')).toIncludeText('docker h');
+      expect(wrapper.find('.notification-popup')).toIncludeText('today');
+    });
+  });
+
   describe('When rendered with [show] property set to true', () => {
     const props = { show: true, text: 'not hidden' };
     let wrapper;

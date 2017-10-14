@@ -7,12 +7,10 @@ const initialState = {
 
 const reducers = {
   [ACTION_TYPES.PUSH_NOTIFICATION]: (state, action) => {
-    return { ...state, text: action.notification, show: true };
+    return { ...state, text: action.notification, appointment: undefined, show: true };
   },
   [ACTION_TYPES.PUSH_APPOINTMENT_NOTIFICATION]: (state, action) => {
-    const appointment = action.notification;
-    const message = `You are seeing ${ appointment.provider } ${ appointment.time }`;
-    return { ...state, text: message, show: true };
+    return { ...state, appointment: action.notification, show: true };
   },
   [ACTION_TYPES.HIDE_NOTIFICATION]: (state) => {
     return { ...state, show: false };

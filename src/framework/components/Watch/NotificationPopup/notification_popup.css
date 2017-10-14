@@ -18,6 +18,9 @@
   display: none;
 }
 
+.notification-content {
+  margin-top: 5px
+}
 .alarm-style {
   display: block;
   margin-left: auto;
