@@ -32,7 +32,7 @@ const getNextIndex = (indexChange, selectedIndex, appointments) => {
 };
 
 AppointmentScreenComponent.propTypes = {
-  selectedIndex: number.isRequired,
+  selectedIndex: number,
   appointments: arrayOf(shape({
     id: string,
     patient: string,
@@ -42,15 +42,23 @@ AppointmentScreenComponent.propTypes = {
   })).isRequired,
 };
 
+AppointmentScreenComponent.defaultProps = {
+  selectedIndex: 0,
+};
+
 export const AppointmentScreenButtons = ({ appointments, selectedIndex = 0 }) => ({
   LEFT: () => ButtonAction.goToPage('/'),
-  RIGHT: () => ButtonAction.goToPage(),
+  RIGHT: () => ButtonAction.doNothing(),
   BOTTOM: () => {
     ButtonAction.goToPage({ state: { selectedIndex: getNextIndex(1, selectedIndex, appointments) } });
   },
   TOP: () => {
     ButtonAction.goToPage({ state: { selectedIndex: getNextIndex(-1, selectedIndex, appointments) } });
   },
+  SCREEN: () => ButtonAction.goToPage({
+    pathname: '/appointment-view',
+    state: { appointment: appointments[selectedIndex] },
+  }),
 });
 
 export default WithButtonConfigs(AppointmentScreenComponent, AppointmentScreenButtons);
