@@ -1,33 +1,29 @@
 [
   {
-    "name":"Helpfulpeople",
-    "date":"21/09/2017",
-    "timeStart":"5:00PM",
-    "timeEnd":"8:00PM",
     "location": "location11",
-    "id": "1"
-  },  {
+    "distance": "2km",
     "name":"Helpfulpeople",
     "date":"21/09/2017",
     "timeStart":"5:00PM",
     "timeEnd":"8:00PM",
-    "location": "location22",
-    "id": "2"
+    "id": "my-home"
   },
   {
+    "location": "my home2",
+    "distance": "2km",
     "name":"Helpfulpeople",
     "date":"21/09/2017",
     "timeStart":"5:00PM",
     "timeEnd":"8:00PM",
-    "location": "location33",
-    "id": "3"
+    "id": "my-home2"
   },
   {
+    "location": "my home3",
+    "distance": "2km",
     "name":"Helpfulpeople",
     "date":"21/09/2017",
     "timeStart":"5:00PM",
     "timeEnd":"8:00PM",
-    "location": "location44",
-    "id": "4"
+    "id": "my-home3"
   }
 ]
