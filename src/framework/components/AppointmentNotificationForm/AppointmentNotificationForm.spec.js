@@ -41,7 +41,7 @@ describe('NotificationForm', () => {
         'patient': 'Homer J Simpson',
         'address': 'Level 4, Somewhere St, Sydney',
         'provider': 'Doctor Helpful',
-        'time': 'Today',
+        'datetime': 'Today',
       };
       const appoinments = [firstAppointment];
       expect(componentWrapper.instance().options(appoinments))

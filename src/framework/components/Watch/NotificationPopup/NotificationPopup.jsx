@@ -16,7 +16,7 @@ export const NotificationPopupComp = ({ show, text, appointment }) => {
           { appointment.provider }
         </div>
         <div className='notification-content'>
-          { appointment.time }
+          { appointment.datetime }
         </div>
         <img className='alarm-style' src={ alarm } alt='alarm' />
       </div>

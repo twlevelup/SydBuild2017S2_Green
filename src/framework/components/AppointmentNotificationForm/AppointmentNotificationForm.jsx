@@ -39,7 +39,7 @@ export class AppointmentNotificationFormComponent extends React.Component {
 
   options = (data) => {
     return data.map((element) => {
-      const label = `${ element.time } - ${ element.provider }`;
+      const label = `${ element.datetime } - ${ element.provider }`;
       return { value: element.id, label };
     });
   }

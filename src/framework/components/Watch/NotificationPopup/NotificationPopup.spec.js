@@ -21,7 +21,7 @@ describe('NotificationPopup component', () => {
   });
 
   describe('When rendered appointment', () => {
-    const props = { show: true, appointment: { provider: 'docker h', time: 'today' } };
+    const props = { show: true, appointment: { provider: 'docker h', datetime: 'today' } };
     let wrapper;
     beforeEach(() => {
       wrapper = getMock(props);
