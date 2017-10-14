@@ -9,6 +9,7 @@ import {
 import WithButtonConfigs from '../../../framework/containers/WithButtonConfigs';
 import ButtonAction from '../../../framework/util/ButtonAction';
 import ScrollList from '../../../framework/components/ScrollList/ScrollList';
+import './survey_screen.css';
 
 export const SurveyScreenComponent = ({ surveyResponses, selectedIndex }) => {
   return (
