@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import NotificationContainer from '../../../containers/NotificationContainer';
 import './notification_popup.css';
+import alarm from './alarm.png';
 
 export const NotificationPopupComp = ({ show, text }) => {
   const visibilityClass = show ? '' : 'hidden';
@@ -10,6 +11,7 @@ export const NotificationPopupComp = ({ show, text }) => {
       <p>
         {text}{show}
       </p>
+      <img className='alarm-style' src={ alarm } alt='alarm' />
     </div>
   );
 };
