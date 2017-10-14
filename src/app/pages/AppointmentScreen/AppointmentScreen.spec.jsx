@@ -23,6 +23,7 @@ describe('<AppointmentScreenComponent />', () => {
   }];
   beforeEach(() => {
     jest.resetAllMocks();
+
     componentWrapper = shallow(<AppointmentScreenComponent
       appointments={ mockAppointments }
       selectedIndex={ 0 }
@@ -62,7 +63,7 @@ describe('<AppointmentScreenComponent />', () => {
 
     test('it should have a RIGHT button config of doing nothing', () => {
       AppointmentScreenButtons(componentWrapper).RIGHT();
-      expect(ButtonAction.goToPage).toHaveBeenCalled();
+      expect(ButtonAction.doNothing).toHaveBeenCalled();
     });
 
     describe('Top button', () => {
@@ -78,6 +79,21 @@ describe('<AppointmentScreenComponent />', () => {
         expect(ButtonAction.goToPage).toHaveBeenCalledWith({
           state: { selectedIndex: 1 },
         });
+      });
+    });
+
+    it('should have on SCREEN button config of going to appointment view page with the selected appointment', () => {
+      AppointmentScreenButtons({ appointments: mockAppointments, selectedIndex: 0 }).SCREEN();
+
+      expect(ButtonAction.goToPage).toHaveBeenCalledWith({
+        pathname: '/appointment-view',
+        state: { 'appointment': {
+          'address': 'Level 4, Somewhere St, Sydney',
+          'id': '1',
+          'patient': 'Homer J Simpson',
+          'provider': 'Doctor Helpful',
+          'time': '01/01/2017 00:00' },
+        },
       });
     });
 

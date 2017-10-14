@@ -1,3 +1,16 @@
+.appointment-confirm-heading {
+  color: #21BF00;
+  text-align: center;
+}
+
+h2.provider {
+  line-height: 0;
+}
+
+.appointment-details {
+  background-color: rgba(154, 154, 154, 0.31);
+  font-size: 14px;
+}
 
 .goBackMessage {
   color: #D31624;
@@ -5,6 +18,7 @@
   position: absolute;
   bottom: 0;
 }
-.title{
+
+.title {
   color: #ff9c39;
 }
