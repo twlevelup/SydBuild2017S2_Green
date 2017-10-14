@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { hideNotification, pushNotification } from '../actions/NotificationAction';
+import { hideNotification, pushNotification, pushAppointmentNotification } from '../actions/NotificationAction';
 import { remapButtons } from '../actions/ButtonAction';
 
 const NotificationContainer = (popup) => {
@@ -26,6 +26,9 @@ const NotificationContainer = (popup) => {
       },
       pushNotification: (notification) => {
         dispatch(pushNotification(notification));
+      },
+      pushAppointmentNotification: (notification) => {
+        dispatch(pushAppointmentNotification(notification));
       },
     };
   };

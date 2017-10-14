@@ -54,12 +54,22 @@ describe('NotificationFormContainer', () => {
   });
 
   it('should define a pushNotification prop', () => {
-    expect(wrapper.find('mockedComponent').props().hideNotification).toBeDefined();
+    expect(wrapper.find('mockedComponent').props().pushNotification).toBeDefined();
   });
 
   it('should dispatch a pushNotification action when the pushNotification prop is called', () => {
     wrapper.find('mockedComponent').props().pushNotification('new text');
     expect(store.dispatch).toHaveBeenCalledWith({ type: 'PUSH_NOTIFICATION', notification: 'new text' });
+  });
+
+  it('should define a pushAppointmentNotification prop', () => {
+    expect(wrapper.find('mockedComponent').props().pushAppointmentNotification).toBeDefined();
+  });
+
+  it('should dispatch a pushAppointmentNotification action when the pushNotification prop is called', () => {
+    const appointment = { boo: 'bar' };
+    wrapper.find('mockedComponent').props().pushAppointmentNotification(appointment);
+    expect(store.dispatch).toHaveBeenCalledWith({ type: 'PUSH_APPOINTMENT_NOTIFICATION', notification: appointment });
   });
 
   it('should dispatch a remapButtons action with  when the remapButtons prop is called', () => {

@@ -15,6 +15,18 @@ describe('NotificationReducer', () => {
     });
   });
 
+  describe('When called with PUSH_APPOINTMENT_NOTIFICATION action ', () => {
+    it('should override the existing notification with the new one and set show to true', () => {
+      const notification = { id: '1',
+        patient: 'Homer J Simpson',
+        address: 'Level 4, Somewhere St, Sydney',
+        provider: 'Doctor Helpful',
+        time: 'Today' };
+      const result = reducer(undefined, { type: ACTION_TYPES.PUSH_APPOINTMENT_NOTIFICATION, notification });
+      expect(result).toMatchObject({ text: 'You are seeing Doctor Helpful Today', show: true });
+    });
+  });
+
   describe('When called with HIDE_NOTIFICATION action ', () => {
     it('should set show to false', () => {
       const result = reducer({ text: 'text text', show: true }, { type: ACTION_TYPES.HIDE_NOTIFICATION });
@@ -22,3 +34,4 @@ describe('NotificationReducer', () => {
     });
   });
 });
+

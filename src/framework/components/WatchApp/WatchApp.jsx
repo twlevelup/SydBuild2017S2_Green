@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Watch from '../../../framework/components/Watch/Watch';
 import './WatchApp.css';
 import NotificationForm from '../NotificationForm/NotificationForm';
+import AppointmentNotificationForm from '../AppointmentNotificationForm/AppointmentNotificationForm';
 
 const WatchApp = ({ pages }) => {
   return (
@@ -11,6 +12,7 @@ const WatchApp = ({ pages }) => {
         <h1>LevelUp Watch Edition</h1>
         <p>This is LevelUp Watch Edition sample app.</p>
         <NotificationForm />
+        <AppointmentNotificationForm />
       </div>
       <div id='right'>
         <Watch>
