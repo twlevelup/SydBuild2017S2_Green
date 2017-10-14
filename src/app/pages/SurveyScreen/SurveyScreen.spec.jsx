@@ -63,6 +63,11 @@ describe('<SurveyScreenComponent />', () => {
       expect(ButtonAction.goToPage).toHaveBeenCalled();
     });
 
+    test('it should have a SCREEN button config of going to survey confirmation page', () => {
+      SurveyScreenButtons(componentWrapper).SCREEN();
+      expect(ButtonAction.goToPage).toHaveBeenCalledWith('/survey-confirmation');
+    });
+
     describe('Top button', () => {
       test('it should have a TOP button config of selecting previous survey response', () => {
         SurveyScreenButtons({ surveyResponses: mockSurveyResponses, selectedIndex: 1 }).TOP();

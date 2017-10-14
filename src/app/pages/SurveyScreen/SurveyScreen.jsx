@@ -37,9 +37,16 @@ SurveyScreenComponent.propTypes = {
   })).isRequired,
 };
 
+export const logSurveyResponseAndGoToConfirmation = (surveyResponses, selectedIndex) => {
+  ButtonAction.goToPage('/survey-confirmation');
+  const selectedReponse = surveyResponses[selectedIndex].response;
+  console.log(selectedReponse);
+};
+
 export const SurveyScreenButtons = ({ surveyResponses, selectedIndex = 0 }) => ({
   LEFT: () => ButtonAction.goToPage('/'),
   RIGHT: () => ButtonAction.goToPage(),
+  SCREEN: () => logSurveyResponseAndGoToConfirmation(surveyResponses, selectedIndex),
   BOTTOM: () => {
     ButtonAction.goToPage({ state: { selectedIndex: getNextIndex(1, selectedIndex, surveyResponses) } });
   },
