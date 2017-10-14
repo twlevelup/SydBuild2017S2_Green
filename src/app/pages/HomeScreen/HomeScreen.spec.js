@@ -41,8 +41,8 @@ describe('HomeScreenComponent component', () => {
     expect(ButtonAction.goToPage).toHaveBeenCalledWith('/emergency');
   });
 
-  test('it should have a BOTTOM button config of scrolling page down', () => {
+  test('it should have a BOTTOM button config of going to the survey page', () => {
     HomeScreenButtons.BOTTOM();
-    expect(ButtonAction.scrollDown).toHaveBeenCalled();
+    expect(ButtonAction.goToPage).toHaveBeenCalledWith('/survey');
   });
 });

@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 
 import AppointmentScreen from './app/pages/AppointmentScreen/AppointmentScreen';
 
-
 import HomeScreen from './app/pages/HomeScreen/HomeScreen';
 import CounterScreen from './app/pages/CounterScreen/CounterScreen';
 import ContactScreen from './app/pages/ContactListScreen/ContactListScreen';
@@ -13,6 +12,9 @@ import FoodScreen from './app/pages/FoodScreen/FoodScreen';
 import contacts from './app/data/contacts.json';
 
 import appointments from './app/data/appointments.json';
+
+import SurveyScreen from './app/pages/SurveyScreen/SurveyScreen';
+import surveyResponses from './app/data/survey.json';
 
 import FoodLocationScreen from './app/pages/FoodLocationScreen/FoodLocationScreen';
 
@@ -36,6 +38,7 @@ const pages = [
   { path: '/news', Component: NewsScreen },
   { path: '/emergency', Component: EmergencyScreen },
   { path: '/services', Component: ServicesScreen },
+  { path: '/survey', Component: SurveyScreen, props: { surveyResponses } },
   { path: '/emergency-confirmation', Component: EmergencyConfirmationScreen },
 ];
 
