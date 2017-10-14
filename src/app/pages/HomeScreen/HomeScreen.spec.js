@@ -45,4 +45,9 @@ describe('HomeScreenComponent component', () => {
     HomeScreenButtons.BOTTOM();
     expect(ButtonAction.goToPage).toHaveBeenCalledWith('/survey');
   });
+
+  test('it should have a SCREEN button config of nothing', () => {
+    HomeScreenButtons.SCREEN();
+    expect(ButtonAction.doNothing).toHaveBeenCalled();
+  });
 });
