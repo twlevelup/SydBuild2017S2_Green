@@ -1,7 +1,7 @@
 import React from 'react';
 import Select from 'react-select';
 import PropTypes from 'prop-types';
-import 'react-select/dist/react-select.css';
+import './react-select.css';
 import NotificationContainer from '../../containers/NotificationContainer';
 import './appointment_notification_form.css';
 import appointments from '../../../app/data/appointments.json';
