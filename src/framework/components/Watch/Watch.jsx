@@ -17,12 +17,12 @@ const Watch = ({ children }) => {
         <ButtonContainer id='button-left' type='LEFT' />
         <ButtonContainer id='button-bottom' type='BOTTOM' />
         <ButtonContainer id='button-top' type='TOP' />
-        <ButtonContainer id='button-screen' type='SCREEN' />
         <ViewRouter>
           <ScreenLayout>
             { children }
           </ScreenLayout>
         </ViewRouter>
+        <ButtonContainer id='button-screen' type='SCREEN' />
       </div>
       <div className='strap strap-bottom' />
     </div>

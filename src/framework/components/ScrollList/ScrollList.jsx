@@ -33,7 +33,7 @@ const ScrollList = ({ labels, selectedIndex, itemHeight }) => {
 };
 
 ScrollList.propTypes = {
-  labels: PropTypes.arrayOf(PropTypes.string).isRequired,
+  labels: PropTypes.arrayOf(PropTypes.object).isRequired,
   selectedIndex: PropTypes.number,
   itemHeight: PropTypes.number,
 };

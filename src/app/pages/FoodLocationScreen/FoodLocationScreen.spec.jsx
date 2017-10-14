@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import { FoodLocationScreenComponent } from './FoodLocationScreen';
 
 describe('<FoodLocationScreenComponent />', () => {
@@ -23,7 +23,7 @@ describe('<FoodLocationScreenComponent />', () => {
     },
   ];
   beforeEach(() => {
-    componentWrapper = shallow(<FoodLocationScreenComponent foodList={ foodList } />);
+    componentWrapper = mount(<FoodLocationScreenComponent foodList={ foodList } selectedIndex={ 0 } />);
   });
   it('should display foodList', () => {
     const listItems = componentWrapper.find('h2');
